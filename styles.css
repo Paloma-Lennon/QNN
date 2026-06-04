@@ -299,12 +299,35 @@ body{
 /* IMAGEN */
 
 .news-image{
-    height:250px;
-    background:#1e293b;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+
+height:240px;
+
+position:relative;
+
+overflow:hidden;
+
+background:#1f2937;
+
+}
+
+.news-image img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+transition:.4s;
+
+}
+
+.news-card:hover .news-image img{
+
+transform:scale(1.05);
+
 }
 
 /* CONTENIDO */
@@ -540,18 +563,44 @@ body{
     transform:translateY(-3px);
 }
 
+.world-link:hover .world-image img{
+
+transform:scale(1.08);
+
+}
+
 /* IMAGEN */
 
 .world-image{
-    width:130px;
-    height:130px;
-    background:#0f172a;
-    border-radius:10px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#334155;
-    flex-shrink:0;
+
+width:120px;
+
+height:120px;
+
+overflow:hidden;
+
+border-radius:10px;
+
+background:#081327;
+
+border:1px solid rgba(255,255,255,.08);
+
+flex-shrink:0;
+
+}
+
+.world-image img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+transition:.4s;
+
 }
 
 /* CONTENIDO */
@@ -605,6 +654,8 @@ body{
 .world-link:hover h3{
     color:#ffb703;
 }
+
+
 
 /* BOTÓN */
 
@@ -1124,13 +1175,13 @@ color:#94a3b8;
 
 .news-page-header{
 
-padding:
+padding-top:100px;
 
-180px
-10%
-70px;
+padding-left:10%;
 
-color:white;
+padding-right:10%;
+
+padding-bottom:40px;
 
 }
 
@@ -1151,6 +1202,8 @@ border-bottom:
 font-size:58px;
 
 font-weight:800;
+
+color:white;
 
 margin-bottom:20px;
 
@@ -1236,11 +1289,13 @@ border-color:#2563eb;
 
 .news-page-header{
 
-padding:
+padding-top:100px;
 
-140px
-8%
-60px;
+padding-left:8%;
+
+padding-right:8%;
+
+padding-bottom:30px;
 
 }
 
@@ -1255,6 +1310,7 @@ font-size:36px;
 font-size:18px;
 
 }
+
 
 .filter{
 
@@ -1322,15 +1378,31 @@ transform:translateY(-5px);
 
 height:250px;
 
-background:#1f2937;
-
 position:relative;
 
-display:flex;
+overflow:hidden;
 
-justify-content:center;
+background:#1f2937;
 
-align-items:center;
+}
+
+.article-image img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+display:block;
+
+transition:.4s;
+
+}
+
+.article-link:hover .article-image img{
+
+transform:scale(1.05);
 
 }
 
@@ -1463,9 +1535,9 @@ height:200px;
 
 padding:
 
-180px
+60px
 10%
-100px;
+70px;
 
 }
 
@@ -1575,9 +1647,9 @@ line-height:1.8;
 
 padding:
 
-140px
+60px
 8%
-80px;
+40px;
 
 }
 
@@ -1843,7 +1915,7 @@ font-size:28px;
 
 padding:
 
-100px
+60px
 10%
 45px;
 
@@ -1895,7 +1967,7 @@ max-width:900px;
 
 .fandom-hero{
 
-padding-top:100px;
+padding-top:40px;
 
 padding-left:8%;
 
@@ -2136,7 +2208,7 @@ font-size:20px;
 
 .streamers-hero{
 
-padding-top:120px;
+padding-top:60px;
 
 padding-left:10%;
 
@@ -2190,7 +2262,7 @@ max-width:900px;
 
 .streamers-hero{
 
-padding-top:100px;
+padding-top:40px;
 
 padding-left:8%;
 
@@ -2215,6 +2287,381 @@ font-size:36px;
 .streamers-header p{
 
 font-size:18px;
+
+}
+
+}
+
+/* ========================= */
+/* ARCHIVO */
+/* ========================= */
+
+.archive{
+
+padding:0 10% 100px;
+
+}
+
+.archive-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(2,1fr);
+
+gap:30px;
+
+}
+
+.archive-link{
+
+text-decoration:none;
+
+}
+
+.archive-card{
+
+background:#0f1528;
+
+border:1px solid rgba(255,255,255,.08);
+
+border-radius:18px;
+
+padding:40px;
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+.archive-card:hover{
+
+transform:translateY(-5px);
+
+border-color:#2563eb;
+
+}
+
+.archive-avatar{
+
+width:110px;
+
+height:110px;
+
+margin:auto;
+
+margin-bottom:25px;
+
+border-radius:50%;
+
+overflow:hidden;
+
+border:4px solid #050816;
+
+}
+
+.archive-avatar img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+.archive-card h3{
+
+font-size:30px;
+
+color:white;
+
+margin-bottom:10px;
+
+}
+
+.archive-role{
+
+display:block;
+
+font-size:12px;
+
+letter-spacing:2px;
+
+color:#3b82f6;
+
+margin-bottom:25px;
+
+}
+
+.archive-card p{
+
+color:#94a3b8;
+
+font-size:18px;
+
+line-height:1.7;
+
+margin-bottom:30px;
+
+}
+
+.archive-tags{
+
+display:flex;
+
+justify-content:center;
+
+gap:10px;
+
+flex-wrap:wrap;
+
+}
+
+.archive-tags span{
+
+padding:10px 14px;
+
+border:1px solid rgba(59,130,246,.3);
+
+border-radius:8px;
+
+color:#60a5fa;
+
+font-size:12px;
+
+}
+
+@media (max-width:900px){
+
+.archive-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.archive-card{
+
+padding:28px;
+
+}
+
+}
+
+
+/* ========================= */
+/* NEWSLETTER */
+/* ========================= */
+
+.newsletter-section{
+
+padding:
+
+60px
+10%
+80px;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.newsletter-card{
+
+width:100%;
+
+max-width:900px;
+
+background:
+
+linear-gradient(
+180deg,
+#101a36 0%,
+#0b1328 100%
+);
+
+border:
+
+1px solid rgba(255,255,255,.08);
+
+border-radius:20px;
+
+padding:60px;
+
+text-align:center;
+
+box-shadow:
+
+0 0 30px rgba(0,0,0,.25);
+
+}
+
+.newsletter-icon{
+
+font-size:70px;
+
+color:#3b82f6;
+
+margin-bottom:25px;
+
+}
+
+.newsletter-card h1{
+
+font-size:60px;
+
+font-weight:900;
+
+line-height:1;
+
+color:white;
+
+margin-bottom:25px;
+
+}
+
+.newsletter-description{
+
+max-width:700px;
+
+margin:auto;
+
+font-size:24px;
+
+line-height:1.8;
+
+color:#9ca3af;
+
+margin-bottom:50px;
+
+}
+
+.newsletter-form{
+
+max-width:600px;
+
+margin:auto;
+
+display:flex;
+
+flex-direction:column;
+
+gap:20px;
+
+text-align:left;
+
+}
+
+.newsletter-form label{
+
+font-size:13px;
+
+letter-spacing:1px;
+
+font-weight:600;
+
+color:#94a3b8;
+
+}
+
+.newsletter-form input{
+
+width:100%;
+
+padding:18px;
+
+border-radius:10px;
+
+border:
+
+1px solid rgba(255,255,255,.1);
+
+background:#050b18;
+
+color:white;
+
+font-size:16px;
+
+outline:none;
+
+}
+
+.newsletter-form input:focus{
+
+border-color:#3b82f6;
+
+}
+
+.newsletter-form button{
+
+margin-top:15px;
+
+padding:20px;
+
+border:none;
+
+border-radius:10px;
+
+background:#2563eb;
+
+color:white;
+
+font-size:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.newsletter-form button:hover{
+
+background:#3b82f6;
+
+transform:translateY(-2px);
+
+}
+
+@media (max-width:900px){
+
+.newsletter-section{
+
+padding:
+
+60px
+8%
+50px;
+
+}
+
+.newsletter-card{
+
+padding:35px;
+
+}
+
+.newsletter-card h1{
+
+font-size:40px;
+
+}
+
+.newsletter-description{
+
+font-size:18px;
+
+line-height:1.6;
+
+}
+
+.newsletter-icon{
+
+font-size:50px;
 
 }
 

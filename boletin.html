@@ -11,7 +11,7 @@ content="width=device-width, initial-scale=1.0">
 
 <title>
 
-Fandom | QNN
+Archivo de Habitantes | QNN
 
 </title>
 
@@ -22,9 +22,7 @@ href="styles.css">
 
 <body>
 
-<!-- ========================= -->
 <!-- HEADER -->
-<!-- ========================= -->
 
 <header class="header">
     <div class="container">
@@ -41,11 +39,11 @@ href="styles.css">
                 <li><a href="index.html">INICIO</a></li>
                 <li><a href="noticias.html">NOTICIAS</a></li>
                 <li><a href="world.html">QSMP WORLD</a></li>
-                <li><a href="fandom.html" class="active">FANDOM</a></li>
+                <li><a href="fandom.html">FANDOM</a></li>
                 <li><a href="streamers.html">STREAMERS</a></li>
-                <li><a href="#">LORE</a></li>
-                <li><a href="#">SOBRE QNN</a></li>
-                <li><a href="#">BOLETÍN</a></li>
+                <li><a href="lore.html">LORE</a></li>
+                <li><a href="about.html">SOBRE QNN</a></li>
+                <li><a href="boletin.html" class="active">BOLETÍN</a></li>
             </ul>
         </nav>
 
@@ -67,208 +65,62 @@ href="styles.css">
         </div>
     </div>
 
-
-
 </header>
 
 
 
-
 <!-- ========================= -->
-<!-- HERO -->
+<!-- BOLETÍN QNN -->
 <!-- ========================= -->
 
-<section class="fandom-hero">
+<section class="newsletter-section">
 
-<div class="fandom-header">
+    <div class="newsletter-card">
 
-<h1>
+        <div class="newsletter-icon">
+            ✉
+        </div>
 
-♡ FANDOM & GOSSIP
+        <h1>
+            ALERTAS QNN EN TU CORREO
+        </h1>
 
-</h1>
+        <p class="newsletter-description">
+            Suscríbete al sistema de notificaciones de QNN.
+            Recibirás las noticias más importantes,
+            eventos especiales y actualizaciones del QSMP
+            directamente en tu bandeja de entrada.
+        </p>
 
-<p>
+        <form
+    class="newsletter-form"
+    action="guardar.php"
+    method="POST">
 
-Rumores, ships, clips virales y todo lo que la comunidad no deja de hablar.
+    <label>
+        DIRECCIÓN DE CORREO ELECTRÓNICO
+    </label>
 
-</p>
+    <input
+        type="email"
+        name="email"
+        placeholder="ejemplo@correo.com"
+        required>
 
-</div>
+    <button type="submit">
+        ACTIVAR NOTIFICACIONES
+    </button>
+
+</form>
+
+    </div>
 
 </section>
 
 
 <!-- ========================= -->
-<!-- FANDOM GRID -->
+<!-- FOOTER -->
 <!-- ========================= -->
-
-<section class="fandom-feed">
-
-<div class="fandom-grid">
-
-<!-- CARD -->
-
-<a href="teoria1.html" class="fandom-card-link">
-
-<article class="fandom-card">
-
-<div class="fandom-image">
-
-🔎
-
-</div>
-
-<div class="fandom-body">
-
-<span class="fandom-tag">
-
-TEORÍAS
-
-</span>
-
-<h3>
-
-¿Qué significa el nuevo código morse? El hilo que lo explica
-
-</h3>
-
-<div class="fandom-stats">
-
-♡ 12K Likes
-
-</div>
-
-</div>
-
-</article>
-
-</a>
-
-
-
-<!-- CARD -->
-
-<a href="clip1.html" class="fandom-card-link">
-
-<article class="fandom-card">
-
-<div class="fandom-image">
-
-😂
-
-</div>
-
-<div class="fandom-body">
-
-<span class="fandom-tag">
-
-CLIPS
-
-</span>
-
-<h3>
-
-El momento más divertido del stream de anoche (Viral)
-
-</h3>
-
-<div class="fandom-stats">
-
-♡ 45K Likes
-
-</div>
-
-</div>
-
-</article>
-
-</a>
-
-
-
-<!-- CARD -->
-
-<a href="rumor1.html" class="fandom-card-link">
-
-<article class="fandom-card">
-
-<div class="fandom-image">
-
-💔
-
-</div>
-
-<div class="fandom-body">
-
-<span class="fandom-tag">
-
-RUMORES
-
-</span>
-
-<h3>
-
-¿Alianza traicionada? Analizamos las interacciones recientes
-
-</h3>
-
-<div class="fandom-stats">
-
-♡ 8K Likes
-
-</div>
-
-</div>
-
-</article>
-
-</a>
-
-
-
-<!-- CARD -->
-
-<a href="fanart1.html" class="fandom-card-link">
-
-<article class="fandom-card">
-
-<div class="fandom-image">
-
-🎨
-
-</div>
-
-<div class="fandom-body">
-
-<span class="fandom-tag">
-
-FANART
-
-</span>
-
-<h3>
-
-Top 10 fanarts de la semana: Especial "Pumpkinduo"
-
-</h3>
-
-<div class="fandom-stats">
-
-♡ 22K Likes
-
-</div>
-
-</div>
-
-</article>
-
-</a>
-
-</div>
-
-</section>
-
 
 <footer class="footer">
 
