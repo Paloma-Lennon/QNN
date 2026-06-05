@@ -1,23 +1,49 @@
 <?php
 
 $conexion = new mysqli(
-"localhost",
-"root",
-"",
-"qnn"
+    "localhost",
+    "root",
+    "",
+    "qnn"
 );
 
-$email = $_POST["email"];
+if($conexion->connect_error){
+    die("Error de conexión");
+}
+
+$email = trim($_POST["email"]);
 
 $sql = "INSERT INTO suscriptores(email)
-VALUES(?)";
+        VALUES(?)";
 
 $stmt = $conexion->prepare($sql);
 
-$stmt->bind_param("s",$email);
+$stmt->bind_param("s", $email);
 
-$stmt->execute();
+if($stmt->execute()){
 
-header("Location: boletin.html");
+    header(
+        "Location: boletin.html?registro=ok"
+    );
+
+}else{
+
+    if($conexion->errno == 1062){
+
+        header(
+            "Location: boletin.html?registro=duplicado"
+        );
+
+    }else{
+
+        header(
+            "Location: boletin.html?registro=error"
+        );
+
+    }
+
+}
+
+exit;
 
 ?>
